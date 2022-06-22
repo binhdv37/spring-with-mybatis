@@ -1,6 +1,7 @@
 package com.example.springwithmybatis.mapper.role;
 
 import com.example.springwithmybatis.model.Role;
+import com.example.springwithmybatis.model.Role2;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -44,4 +45,10 @@ public interface RoleMapper {
             "delete from role where id = #{id}" +
             "")
     void delete(String id);
+
+    @Insert("" +
+            " insert into role " +
+            " values ( #{id, javaType=java.util.UUID, jdbcType=OTHER, typeHandler=com.example.springwithmybatis.typeHandler.UuidTypeHandler}, #{name}, #{createdTime}, #{createdBy}, #{updatedTime}, #{updatedBy} ) " +
+            "")
+    void save2(Role2 role2);
 }
