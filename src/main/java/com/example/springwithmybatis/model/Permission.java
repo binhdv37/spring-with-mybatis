@@ -15,6 +15,6 @@ public class Permission {
 
     @Override
     public String toString() {
-        return "{ id: " + id + ", name: " + name + ", key: " + key + ", createdTime: " + createdTime + " }";
+        return "Permission(id= " + id + ", name= " + name + ", key= " + key + ", createdTime= " + createdTime + ")";
     }
 }
