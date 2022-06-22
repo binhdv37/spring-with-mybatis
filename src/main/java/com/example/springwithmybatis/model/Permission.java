@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Permission {
-    private String id;
+    private String id; // can not use UUID, does not know why yet
     private String name;
     private String key;
     private Long createdTime;
